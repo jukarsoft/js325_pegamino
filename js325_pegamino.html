@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<style>
+
+		* {
+			width: 600px;
+			margin: auto;
+		}
+		.imagen {
+			height: 600px;
+			border: 1px solid black;
+			background-size: contain;
+			background-color: black;
+		}
+	</style>
+	<script>
+		window.onload = function() {
+			//activar un listener sobre todo el documento
+			document.getElementById('texto').addEventListener('keydown', function () {onkeydownf()});
+			document.getElementById('pergamino').addEventListener('mousedown', function () {onmousedownf()});
+		}
+		function onkeydownf () {
+			//var texto1 = document.getElementById('texto');
+			//var pergamino = document.getElementById('pergamino');
+			//pergamino.innerHTML=texto1.innerHTML; 
+			document.getElementById(perga).innerHTML = document.getElementById('texto').innerHTML;
+		}	
+		function onmousedownf () {
+			//var texto1 = document.getElementById('texto');
+			//var pergamino = document.getElementById('pergamino');
+			//pergamino.innerHTML=texto1.innerHTML; 
+			document.getElementById(imagen).innerHTML = document.getElementById('texto').innerHTML;
+		}						
+	</script>
+</head>
+<body>
+	<textarea name="texto" id="texto" cols="300" rows="5">Ejercicio de escritura en pegamino utilizando evento tecla pulsada y innerHtml</textarea>
+	<div  id="pergamino"  class="perga">
+		<img src="img/pergamino.png" class="imagen">
+	</div>
+	
+</body>
+</html>
